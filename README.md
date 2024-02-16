@@ -26,4 +26,37 @@ To run the project, follow these steps:
 * Import the relevant h5 and JSON files into the real_time_detection.ipynb notebook.
 * Run all cells in the real_time_detection.ipynb notebook to perform real-time emotion recognition.
 
+# Emotion Recognition with Deep Learning
+
+This project aims to develop deep learning models for emotion recognition using facial expressions. The models are trained on the FER (Facial Expression Recognition) dataset, which contains grayscale images of faces labeled with one of seven emotions: Angry, Disgust, Fear, Happy, Sad, Surprise, Neutral.
+
+## How to Run the Project on Google Colab
+
+### 1. Open the Notebook in Google Colab
+Navigate to the cloned repository directory and open the notebook `model training code.ipynb` in Google Colab.
+
+
+### 2. Install Dependencies
+Make sure to install any required dependencies by running the necessary code cells or importing the required libraries.
+
+### 3. Pre-process the Data
+Run the code cells responsible for pre-processing the FER dataset. This includes converting CSV data to numpy arrays, splitting the dataset into training and testing sets, and visualizing the data distribution.
+
+### 4. Data Augmentation
+Perform data augmentation to balance the distribution of emotion classes in the dataset. This step involves generating additional images by applying transformations such as flipping, rotation, and filtering to the existing images.
+
+### 5. Build and Train the Models
+Build different deep learning models (VGG16, InceptionV3, VGG19, Xception) for emotion recognition using the pre-processed and augmented dataset. Compile the models with appropriate loss functions, optimizers, and evaluation metrics. Train the models on the training data and monitor their performance using validation data.
+
+### 6. Evaluate the Models
+Evaluate the trained models on the test dataset to assess their accuracy and performance. This step involves calculating metrics such as accuracy, loss, precision, recall, and F1-score.
+
+### 7. Save the Models
+Save the trained models and their weights for future use or real-time testing.
+
+### 8. Real-Time Testing
+You can load the saved models and use them for real-time emotion recognition using the real time detection.ipynb. The testing must be done on a local machine as it requires access to a webcam.
+
+
+
 
