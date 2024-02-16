@@ -6,7 +6,7 @@ Emotions are a universal aspect of being human, regardless of age. They manifest
 Convolutional Neural Networks (CNNs) are powerful tools in image analysis, adept at extracting features from images. However, training CNNs from scratch is time-consuming and requires extensive datasets. Transfer learning addresses this by using pre-trained networks on large datasets, fine-tuning them for specific tasks. This approach, utilizing networks like ResNet and GoogleNet, allows for real-time emotion detection.
 
 ## Dataset
-Two datasets were considered for training the model. The AffectNet dataset, the largest of its kind, comprises 450,000 annotated images gathered from search engines using emotional keywords. It employs both categorical and valence-arousal scale models to measure emotions, offering a comprehensive view of emotional responses. The FER+ dataset, an improved version of FER, contains 28,709 images with seven emotion labels. Tags were refined using crowd-sourcing, enhancing tag accuracy and inter-rater agreement to over 80%. Receiving access to AffectNet is difficult as it is not a public dataset however FER is free to use and the download link is given at the bottom of the readme.
+Two datasets were considered for training the model. The AffectNet dataset, the largest of its kind, comprises 450,000 annotated images gathered from search engines using emotional keywords. It employs both categorical and valence-arousal scale models to measure emotions, offering a comprehensive view of emotional responses. The FER+ dataset, an improved version of FER, contains 28,709 images with seven emotion labels. Tags were refined using crowd-sourcing, enhancing tag accuracy and inter-rater agreement to over 80%. For this project, the FER+ dataset is chosen as the primary dataset. The FER+ dataset contains a large collection of facial images with labeled emotions, making it suitable for training emotion recognition models. The dataset is publicly available and licensed under the MIT license.
 
 ## Ethical Use of Data
 The primary dataset for this project is the FER+ dataset, which is publicly available and licensed under the MIT license. It contains images of human participants with labeled emotions. To address the need for real-time emotion detection without human participants, I will evaluate the program myself and use a publicly available dataset for testing. This approach eliminates the need for additional human participants, aligning with ethical guidelines.
@@ -20,5 +20,10 @@ Real-time emotion detection involves two steps: facial recognition and emotion r
 Detected faces undergo preprocessing to adjust size and convert to black and white before passing through the fine-tuned CNN model. The predicted emotion is displayed on screen. The software is developed in Python using Visual Studio Code on a local machine.
 
 ## Running the project
-model training code.ipynb must be run to train the models and export them in h5 and json formats to save model weights and architecture, each model must be trained seperately. There is a cell at the start of the file which imports preprocessed data, however this repo does not contain those files due to size restrictions hence there is no need to run this cell. The dataset used is FER2013 which can beb downloaded at https://www.kaggle.com/datasets/msambare/fer2013. The haarcascade_frontalface_default.xml contains haar features for facial detection. real time detection.ipynb contains the code for real time emotion recognition, all cells must be run to reproduce output. The relevant h5 and json files must be imported in this ipynb file to run. 
+To run the project, follow these steps:
+* Download the FER2013 dataset from Kaggle(https://www.kaggle.com/datasets/msambare/fer2013).
+* Run the model_training_code.ipynb notebook to train the CNN models and export them in h5 and JSON formats.
+* Import the relevant h5 and JSON files into the real_time_detection.ipynb notebook.
+* Run all cells in the real_time_detection.ipynb notebook to perform real-time emotion recognition.
+
 
